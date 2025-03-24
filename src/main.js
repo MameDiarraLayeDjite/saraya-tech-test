@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia' // Nous utiliserons Pinia pour le state management
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+// Configuration de Pinia
+app.use(createPinia())
+
+app.mount('#app')
